@@ -124,6 +124,116 @@ void sol5() {
 }
 
 
+// 6) todo: 
+// Scrieţi un program C/C++ care citeşte de la tastatură un număr natural n (2<n<25) şi apoi
+// construieşte în memorie o matrice cu n linii şi n coloane, numerotate de la 1 la n, ale cărei
+// elemente primesc valori după cum urmează : elementul din linia i şi coloana j primeşte ca
+// valoare ultima cifră a produsului i* j(1≤i≤n şi 1≤j≤n).
+
+void sol6() {
+
+	int a[10][10];
+	int n;
+	cout << "Introduceti elementul n: ";
+	cin >> n;
+
+	construireMatrice4(a, n);
+	afisare(a, n, n);
+
+}
+
+
+// 7) todo:
+// Scrieţi un program C/C++ care citeşte de la tastatură un număr natural nenul, cu maximum
+// 8 cifre, construieşte în memorie şi afişează apoi pe ecran o matrice pătratică, având
+// numărul de linii şi de coloane egal cu numărul de cifre ale numărului dat, completată cu
+// cifrele numărului citit.
+// Astfel, elementele de pe prima coloană a matricei vor fi toate egale cu
+// cifra unităţilor numărului dat, elementele de pe a doua coloană a
+// matricei vor fi toate egale cu cifra zecilor numărului dat, şi aşa mai
+// departe, ca în exemplu.
+
+
+void sol7() {
+
+	int a[10][10];
+	int n;
+	cout << "Introduceti elementul n: ";
+	cin >> n;
+
+	construireMatrice5(a, n);
+
+}
+
+
+// 8) todo:
+// Scrieţi un program C/C++ care citeşte de la tastatură un număr natural n (2<n<20),
+// construieşte în memorie şi afişează pe ecran o matrice cu n linii şi n coloane, în care
+// fiecare element de pe diagonala secundară are valoarea n, fiecare element aflat deasupra
+// diagonalei secundare este mai mic cu o unitate decât vecinul aflat pe aceeaşi linie în
+// dreapta lui şi fiecare element aflat sub diagonala secundară este mai mare cu o unitate
+// decât vecinul aflat pe aceeaşi linie în stânga lui.
+
+void sol8() {
+
+	int a[10][10];
+	int n;
+	cout << "Introduceti elementul n: ";
+	cin >> n;
+
+	construireMatrice6(a, n);
+	afisare(a, n, n);
+
+}
+
+
+// 9) todo: 
+// Scrieţi un program C/C++ care citeşte de la tastatură un număr natural n (2<n<20),
+//construieşte în memorie şi afişează pe ecran o matrice cu n linii şi n coloane, numerotate
+// de la 1 la n în care fiecare element din matrice aflat pe o linie impară va fi egal cu numărul
+// liniei pe care se află şi fiecare element aflat pe o linie pară va fi egal cu numărul coloanei pe
+// care se află.
+
+void sol9() {
+
+	int a[10][10];
+	int n;
+	cout << "Introduceti elementul n: ";
+	cin >> n;
+
+	construireMatrice7(a, n);
+	afisare(a, n, n);
+
+}
+
+
+// 10) todo: 
+// Scrieţi programul C/C++ care citeşte de la tastatură un număr natural n (n≤20),
+// construieşte în memorie şi afişează pe ecran, matricea cu n linii şi n coloane, în care se vor
+// memora în ordinea crescătoare a valorii, pe linii şi coloane, primele n2
+// numere naturale
+// nenule, pare, care nu sunt divizibile cu 3.
+
+void sol10() {
+
+	int a[10][10];
+	int n;
+	cout << "Introduceti elementul n: ";
+	cin >> n;
+
+	construireMatrice8(a, n);
+	afisare2(a, n, n);
+
+}
+
+
+
+
+
+
+
+
+
 // 10 probleme vectori
 
 // 1) todo:  
@@ -246,3 +356,72 @@ void sol16() {
 
 
 // 7) todo: 
+// Fişierul text numere.txt conţine pe prima linie un număr natural n (n<30000), iar pe a
+// doua linie n numere întregi având maximum 4 cifre fiecare.Se cere să se afişeze pe ecran
+// un şir de n numere întregi, cu proprietatea că valoarea termenului de pe poziţia i
+// (i = 1, 2, …, n) din acest şir este egală cu cea mai mare dintre primele i valori de pe a doua
+// linie a fişierului numere.txt.
+
+void sol17() {
+
+	int v[100] = { 4, 6, 3, 7, 8, 1 , 6, 2, 7, 9, 10, 8 };
+	int dim = 12;
+
+	schimbareVal(v, dim);
+
+}
+
+
+// 8) todo: 
+// Scrieţi definiţia completă a subprogramului multiplu care are 3 parametri: a, prin care
+// primeşte un tablou unidimensional cu maximum 100 de numere naturale mai mici decât
+// 1000, n, numărul efectiv de elemente ale tabloului şi k, un număr natural(k≤9).
+// Subprogramul returnează numărul de elemente din tablou care sunt multipli ai numărului k
+// şi au ultima cifră egală cu k.
+
+void sol18() {
+
+	int v[100] = { 9, 273, 63, 83, 93, 123 };
+	int dim = 6;
+
+	cout << "Introduceti elementul k:";
+	int k;
+	cin >> k;
+
+	cout << "Numaruld e elemente din tablou care sunt multipli ai numărului k şi au ultima cifra egala cu k este: " << multiplu(v, dim , k)<<endl;
+
+
+}
+
+
+// 9) todo: 
+// Scrieţi definiţia completă a unui subprogram P cu doi parametri, care primeşte prin
+// intermediul primului parametru, n, un număr natural nenul(1≤n≤100) şi prin intermediul
+// celui de - al doilea parametru, a, un tablou unidimensional cu elementele numerotate de la 1
+// la n, numere întregi de cel mult 4 cifre fiecare.Subprogramul returnează suma tuturor
+// numerelor impare aflate pe poziţii pare din tablou.
+
+void sol19() {
+
+	int v[10] = { 3, 12, 7, 1, 4 ,3 };
+	int dim = 6; 
+
+	cout << sumaCifImpPozPar(v, dim) << endl;
+
+}
+
+
+// 10) todo: 
+// Scrieţi un program C/C++, eficient atât din punct de vedere al timpului de executare, care
+// afişează pe ecran toate numerele situate pe a doua linie a fişierului, în ordinea crescătoare
+// a valorilor lor, separate prin câte un spaţiu. 
+
+void sol20(){
+
+	int v[10] = { 12 , 21 ,22 ,11, 9 ,12, 3 };
+	int dim = 7;
+
+	bubbleSort(v, dim);
+	afisareVector(v, dim);
+
+}

@@ -52,10 +52,76 @@ void sol2() {
 
 }
 
+// 3) todo:
+// Scrieţi un program C/C++ care citeşte de la tastatură un număr natural n (2≤n≤24) şi
+// construieşte în memorie o matrice cu n linii şi n coloane ale cărei elemente vor primi valori după cum urmează :
+// -elementele aflate pe diagonala secundară a matricei vor primi valoarea 0
+// - elementele de pe prima linie, cu excepţia celui aflat pe diagonala secundară vor primi valoarea n
+// - elementele de pe a doua linie, cu excepţia celui aflat pe diagonala secundară vor primi valoarea n - 1
+// - elementele de pe ultima linie, cu excepţia celui aflat pe diagonala secundară vor primi valoarea 1
+
+void sol3() {
+
+	int a[10][10];
+	int n;
+	cout << "Introduceti elementul n: ";
+	cin >> n;
+
+	cout << "Matricea construita este: " << endl;
+
+	construireMatrice2(a, n);
+	afisare(a, n, n);
+
+}
 
 
+// 4) todo: 
+// Scrieţi un program C/C++ care citeşte de la tastatură două numere naturale n şi m
+// (2≤m≤10, 2≤n≤10) şi care construieşte în memorie şi apoi afişează o matrice A cu n linii
+// (numerotate de la 1 la n) şi m coloane(numerotate de la 1 la m) cu proprietatea că fiecare
+// element Aij memorează cea mai mare dintre valorile indicilor i şi j(1≤i≤n, 1≤j≤m).
+// Matricea se va afişa pe ecran, câte o linie a matricei pe câte o linie a ecranului, elementele
+// fiecărei linii fiind separate prin câte un spaţiu
+
+void sol4() {
+
+	int a[10][10];
+	int n, m;
+	cout << "Introduceti elementul n: ";
+	cin >> n;
+	cout << "Introduceti elementul m: ";
+	cin >> m;
+
+	cout << "Matricea construita este: " << endl;
+	construireMatrice3(a, n, m);
+	afisare(a, n, m);
+
+}
 
 
+// 5) todo: 
+// Se consideră tabloul bidimensional cu n linii şi n coloane ce conţine numere naturale cu cel
+// mult patru cifre fiecare.Scrieţi programul C / C++ care citeşte de la tastatură numărul natural
+// n(2≤n≤23) şi cele n * n elemente ale tabloului şi apoi afişează pe ecran elementele primului
+// pătrat concentric, separate prin câte un spaţiu.Pătratul este parcurs în sensul acelor de
+// ceasornic începând din colţul său stânga - sus, ca în exemplu.Primul pătrat concentric este
+// format din prima şi ultima linie, prima şi ultima coloană a tabloului.
+
+void sol5() {
+
+	int a[10][10] = {
+		{1, 2, 3, 4, 5},
+		{6, 21, 22, 23, 1},
+		{2, 31, 32 , 33, 6},
+		{7, 41, 42, 43, 2},
+		{3, 4, 5, 6, 7} };
+
+	int l = 5;
+	int c = 5;
+
+	parcurgereSpirala(a, l, c);
+
+}
 
 
 // 10 probleme vectori
@@ -140,3 +206,43 @@ void sol14() {
 	afisareCelPutin3Cif(v, dim);
 
 }
+
+
+// 5) todo: 
+// Scrieţi un program C/C++ care să citească de la tastatură un număr natural nenul n
+// (n≤100)şi apoi un şir de n numere naturale de cel mult 8 cifre fiecare, toate numerele din
+// şir fiind strict mai mari decât 1. Programul va determina şi va afişa pe ecran toate numerele prime din şirul citit.Numerele determinate se
+// vor afişa pe ecran, separate prin câte un spaţiu, în ordine crescătoare a valorii lor.
+
+void sol15() {
+
+	int v[100] = { 1125, 2, 314, 101, 37, 225, 12 };
+	int dim = 9;
+
+	cout << "Numerele prime din vector sunt: ";
+	afisareNrPrime(v, dim);
+	cout << endl;
+
+}
+
+
+// 6) todo: 
+// Scrieţi un program C/C++ care citeşte de la tastatură un număr natural n (n≤100) şi apoi
+// cele n elemente, numere naturale cu cel mult 4 cifre fiecare, ale unui tablou unidimensional
+// a.Programul afişează pe o linie a ecranului suma celor n elemente ale tabloului, pe
+// următoarea linie a ecranului suma primelor n - 1 elemente şi aşa mai departe, astfel încât
+// ultima linie afişată să conţină doar primul element al tabloului.
+
+
+void sol16() {
+
+	int v[10] = { 1, 7 , 3, 4 };
+	int dim = 4;
+
+	cout << "Sumele elementelor sunt: " << endl;
+	afisareSuma(v, dim);
+
+}
+
+
+// 7) todo: 

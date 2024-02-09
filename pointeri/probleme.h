@@ -84,8 +84,8 @@ void testare3() {
 
 void afisare(int a[10][10], int n, int m) {
 
-	for (int i = 1; i < n; i++) {
-		for (int j = 1; j < m; j++) {
+	for (int i = 1; i <= n; i++) {
+		for (int j = 1; j <= m; j++) {
 			cout << a[i][j] << " ";
 		}
 		cout << endl;
@@ -227,4 +227,97 @@ void afisareCelPutin3Cif(int v[100], int dim) {
 	if (ok == 0) {
 		cout << "Nu exista";
 	}
+}
+
+
+
+void construireMatrice2(int a[10][10], int n) {
+
+	for (int i = 0; i < n; i++) {
+		for (int j = 0; j < n; j++) {
+			if (i + j == n - 1) {
+				a[i][j] = 0;
+			}
+			else {
+				a[i][j] = n - i;
+			}
+		}
+	}
+}
+
+void construireMatrice3(int a[10][10], int n, int m) {
+
+	for (int i = 1; i <= n; i++) {
+		for (int j = 1; j <= m; j++) {
+			if (i > j) {
+				a[i][j] = i;
+			}
+			else {
+				a[i][j] = j;
+			}
+		}
+	}
+}
+
+bool isPrim(int nr) {
+
+	int ct = 0;
+
+	for (int i = 1; i <= nr; i++) {
+		if (nr % i == 0) {
+			ct++;
+		}
+	}
+	if (ct == 2) {
+		return true;
+	}
+	return false;
+}
+
+void afisareNrPrime(int v[100], int dim) {
+
+	bubbleSort(v, dim);
+
+	for (int i = 0; i < dim; i++) {
+		if (isPrim(v[i]) == true) {
+			cout << v[i] << " ";
+		}
+	}
+
+}
+
+void afisareSuma(int v[10], int dim) {
+
+	int s = 0;
+
+	for (int i = 0; i < dim; i++) {
+		s = s + v[i];
+	}
+
+	for (int i = dim - 1; i >= 0; i--) {
+		cout << s << endl;
+		s = s - v[i];
+	}
+
+}
+
+void parcurgereSpirala(int a[10][10], int l, int c) {
+
+	for (int i1 = 0, j1 = 0, i2 = l - 1, j2 = c - 1; i1 <= i2 && j1 <= j2; i1++, j1++, i2--, j2--) {
+
+		for (int k = j1; k <= j2; k++) {
+			cout << a[i1][k] << " ";
+		}
+		for (int k = i1 + 1; k <= i2; k++) {
+			cout << a[k][j2] << " ";
+		}
+		for (int k = j2 - 1; k >= j1; k--) {
+			cout << a[i2][k] << " ";
+		}
+		for (int k = i2 - 1; k > i1; k--) {
+			cout << a[k][j1] << " ";
+		}
+		break;
+	}
+
 }
